@@ -10,6 +10,9 @@ class Jobs extends StatelessWidget{
     List<String> jobsImages = [
       "images/image001.png",
       "images/image002.png",
+      "images/image003.png",
+      "images/image001.png",
+      "images/image002.png",
       "images/image003.png"
     ];
 
@@ -26,18 +29,27 @@ class Jobs extends StatelessWidget{
       "Software Engineer",
       "Mobile Developer",
       "Network Engineer",
+      "DevOps Engineer",
+      "Test Engineer",
+      "Sytems Engineer",
     ];
 
     List<String> jobsCompanies = [
       "Google, LLC",
       "Uber Technologies, Inc",
-      "Slack Technologies"
+      "Slack Technologies",
+      "Slack Technologies",
+      "Google, LLC",
+      "Uber Technologies, Inc"
     ];
 
     List<String> jobsSalaries = [
       "₱ 100,000 /mo",
       "₱ 85,000 /mo",
-      "₱ 90,000 /mo"
+      "₱ 90,000 /mo",
+      "₱ 150,000 /mo",
+      "₱ 65,000 /mo",
+      "₱ 70,000 /mo"
     ];
 
     CardController controller;
@@ -52,27 +64,59 @@ class Jobs extends StatelessWidget{
               ),
             ),
             Container(
-              alignment: Alignment.centerLeft,
-              margin: EdgeInsets.fromLTRB(20,10,20,0),
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               height: 50,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border.all(color: Colors.white),
-                borderRadius: BorderRadius.circular(10),
-              ),
+              width:  double.infinity,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Icon(Icons.search_rounded),
-                  Expanded(
-                    child:Padding(
-                        padding: const EdgeInsets.fromLTRB(10,0,0,0),
-                        child: Text(
-                          "Search",
-                          textAlign: TextAlign.left,
-                        ),
+                children: [
+                  Expanded(child: Container(
+                    alignment: Alignment.centerLeft,
+                    margin: EdgeInsets.fromLTRB(20,10,10,0),
+                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Colors.white),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Icon(Icons.search_rounded),
+                        Expanded(
+                          child:Padding(
+                            padding: const EdgeInsets.fromLTRB(10,0,0,0),
+                            child: Text(
+                              "Search",
+                              textAlign: TextAlign.left,
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  ),
+                  SizedBox(
+                    height: 50,
+                    width: 60,
+                    child: Card(
+                      margin: EdgeInsets.fromLTRB(0, 10,20, 0),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5.0),
+                      ),
+                      child: Center(
+                          child:IconButton(
+                            icon: Icon(
+                              Icons.filter_list_rounded,
+                              color: mainColor,
+                            ),
+                            onPressed: () {
+                              // do something
+                              createDialog(context);
+                            },
+                          ),
+                      ),
+                      elevation: 0.5,
                     ),
                   )
                 ],
@@ -235,5 +279,198 @@ class Jobs extends StatelessWidget{
             ),
           ]
       );
+  }
+
+  createDialog(BuildContext context){
+
+    double _lowerValue = 20.0;
+    double _upperValue = 80.0;
+    double _lowerValueFormatter = 20.0;
+    double _upperValueFormatter = 20.0;
+
+
+    return showDialog(context: context, builder: (context){
+
+        return Dialog(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20.0)
+            ),
+            child: Container(
+              height: 400,
+              child: Column(
+
+                children: [
+                  Padding(
+                      padding: const EdgeInsets.all(20),
+                      child:Text("Filter Jobs",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16))
+                  ),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Padding(
+                        padding: const EdgeInsets.fromLTRB(20,0,0,0),
+                        child: Text("Field",style: TextStyle(fontSize: 14))
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    margin: EdgeInsets.fromLTRB(20,10,20,0),
+                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFF3F6FA),
+                      border: Border.all(color: Colors.white),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Padding(
+                            padding: const EdgeInsets.fromLTRB(5,0,0,0),
+                            child: Text(
+                              "Select Field",
+                              textAlign: TextAlign.left,
+                            ),
+                          ),
+                        ),
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: Padding(
+                            padding: const EdgeInsets.fromLTRB(0,0,5,0),
+                            child: Icon(Icons.arrow_drop_down_rounded,color: Color(0xFF3CA019)),
+                          ),
+                        ),
+
+                      ],
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Padding(
+                        padding: const EdgeInsets.fromLTRB(20,10,0,0),
+                        child: Text("Location",style: TextStyle(fontSize: 14))
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    margin: EdgeInsets.fromLTRB(20,10,20,0),
+                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFF3F6FA),
+                      border: Border.all(color: Colors.white),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Padding(
+                            padding: const EdgeInsets.fromLTRB(5,0,0,0),
+                            child: Text(
+                              "Select Location",
+                              textAlign: TextAlign.left,
+                            ),
+                          ),
+                        ),
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: Padding(
+                            padding: const EdgeInsets.fromLTRB(0,0,5,0),
+                            child: Icon(Icons.location_on_rounded,color: Color(0xFF3CA019)),
+                          ),
+                        ),
+
+                      ],
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Padding(
+                        padding: const EdgeInsets.fromLTRB(20,10,0,0),
+                        child: Text("Salary Range",style: TextStyle(fontSize: 14))
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    margin: EdgeInsets.fromLTRB(20,10,20,0),
+                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFF3F6FA),
+                      border: Border.all(color: Colors.white),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Padding(
+                            padding: const EdgeInsets.fromLTRB(5,0,0,0),
+                            child: Text(
+                              "Set Salary Range",
+                              textAlign: TextAlign.left,
+                            ),
+                          ),
+                        ),
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: Padding(
+                            padding: const EdgeInsets.fromLTRB(0,0,5,0),
+                            child: Icon(Icons.monetization_on_rounded,color: Color(0xFF3CA019)),
+                          ),
+                        ),
+
+                      ],
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.fromLTRB(20,20,20,0),
+                    height: 50,
+
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Expanded(
+                            child:Container(
+                              padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                              margin: EdgeInsets.fromLTRB(0, 0, 10, 0),
+                              height: 50,
+                              decoration: BoxDecoration(
+                                color: Color(0xFFF3F6FA),
+                                border: Border.all(color: Colors.white),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Center(
+                                child: Text("Clear Filter"),
+                              ),
+                            ),
+                        ),
+                        Expanded(
+                          child:Container(
+                            padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                            margin: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                            height: 50,
+                            decoration: BoxDecoration(
+                              color:  Color(0xFF3CA019),
+                              border: Border.all(color:  Color(0xFF3CA019)),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Center(
+                              child: Text("Apply Filter", style:  TextStyle(color: Colors.white),),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+        );
+    });
   }
 }
