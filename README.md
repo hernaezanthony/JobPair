@@ -1,16 +1,16 @@
-# jobpair
+# JobPair
 
-A new Flutter application.
+An app that provides a Tinder-like experience for job hunters and recruiters.
 
-## Getting Started
+My Entry for Flutter Philippines #UIChallenge
 
-This project is a starting point for a Flutter application.
+<div>Icons made by <a href="https://www.flaticon.com/authors/monkik" title="monkik">monkik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+<br>
+<div>Design inspired by <a href="https://dribbble.com/shots/14208954-Jobee-Job-Finding-App/" title="jobee">Jobee-Job Finding App</a> from <a href="https://www.dribbble.com/" title="Flaticon">https://dribbble.com</a></div>
+<br>
+<div>Library used: <a href="https://pub.dev/packages/flutter_tindercard/" title="libary">https://pub.dev/packages/flutter_tindercard</a></div>
+<br>
+<div>Try it thru Firebase: <a href="https://appdistribution.firebase.dev/i/bf120d3036f59c89" title="libary">https://appdistribution.firebase.dev/i/bf120d3036f59c89</a></div>
+<br>
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![image](https://drive.google.com/uc?export=view&id=1_DwAjO9k3rqEpbwJk2DPdLxiVEdWqckC)
