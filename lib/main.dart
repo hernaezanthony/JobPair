@@ -35,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final tabs = [
     Jobs(),
-    Center(child: Text('Applicants')),
+    Center(child: Text('Profile')),
     Center(child: Text('About'))
   ];
 
