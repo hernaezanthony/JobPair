@@ -26,4 +26,4 @@ My Entry for Flutter Philippines #UIChallenge
 
 <br>
 
-![](https://i.imgur.com/S0AL7W3.gifv)
+![](https://i.imgur.com/S0AL7W3.gif)
