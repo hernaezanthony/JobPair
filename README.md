@@ -13,6 +13,9 @@ My Entry for Flutter Philippines #UIChallenge
 <div>Try it thru Firebase: <a href="https://appdistribution.firebase.dev/i/bf120d3036f59c89" title="libary">https://appdistribution.firebase.dev/i/bf120d3036f59c89</a></div>
 <br>
 
+<div>View demo: <a href="https://i.imgur.com/S0AL7W3.gifv" title="demo">https://i.imgur.com/S0AL7W3.gifv</a></div>
+<br>
+
 ![image](https://i.imgur.com/eHn009g.jpg)
 
 <br>
@@ -25,5 +28,3 @@ My Entry for Flutter Philippines #UIChallenge
 ![image](https://i.imgur.com/eGDuPjh.jpg)
 
 <br>
-
-![](https://i.imgur.com/S0AL7W3.gif)
